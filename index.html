@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Mariée – Robes de Mariée à Antananarivo, Madagascar</title>
+<meta name="description" content="La Mariée – Boutique de robes de mariée, fiançailles et cérémonie à Antananarivo. Pièces uniques et friperie haut de gamme. 69 000 followers. Retrait en magasin.">
+<meta name="keywords" content="robes de mariée Antananarivo, robe mariage Madagascar, robe fiançailles Madagascar, boutique mariage Antananarivo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --nude: #E8DDD0;
+    --blush: #E8C4B8;
+    --gold: #C9A96E;
+    --gold-light: #E8D5A8;
+    --pearl: #D4CCC4;
+    --charcoal: #3A3530;
+    --warm-gray: #8A817A;
+    --white: #FFFFFF;
+    --rose-pale: #F5EAE4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* ---- SCROLLBAR ---- */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+    transition: all 0.4s ease;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--charcoal);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex; gap: 40px; list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -3px; left: 0; right: 100%;
+    height: 1px; background: var(--gold);
+    transition: right 0.3s ease;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { right: 0; }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--white) !important;
+    padding: 10px 24px;
+    font-size: 10px !important;
+    letter-spacing: 0.25em;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--charcoal) !important; }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--charcoal); transition: all 0.3s; }
+
+  /* ---- HERO ---- */
+  #hero {
+    height: 100vh; min-height: 700px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; padding-top: 80px;
+  }
+
+  .hero-text {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 60px 80px 80px;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .hero-badge::before {
+    content: ''; width: 32px; height: 1px; background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 5.5vw, 80px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--charcoal);
+    margin-bottom: 28px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--warm-gray);
+    max-width: 380px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .hero-actions { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 16px 36px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover { background: var(--gold); }
+
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid var(--pearl);
+    color: var(--charcoal);
+    padding: 16px 36px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-social-proof {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--nude);
+    display: flex; gap: 48px;
+  }
+
+  .proof-item { text-align: left; }
+
+  .proof-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+
+  .proof-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .hero-image {
+    position: relative; overflow: hidden;
+    background: var(--nude);
+  }
+
+  .hero-image-main {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.96);
+  }
+
+  /* Placeholder beautiful SVG bride silhouette */
+  .hero-visual {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, #F5EAE4 0%, #EDD5C5 40%, #E0C4B0 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Cellipse cx='200' cy='180' rx='60' ry='70' fill='%23C9A96E' opacity='0.2'/%3E%3Cpath d='M140 250 Q200 230 260 250 L300 580 Q200 620 100 580 Z' fill='%23C9A96E' opacity='0.15'/%3E%3Cpath d='M100 580 Q50 550 30 520 L100 400 L140 380 Z' fill='%23C9A96E' opacity='0.1'/%3E%3Cpath d='M300 580 Q350 550 370 520 L300 400 L260 380 Z' fill='%23C9A96E' opacity='0.1'/%3E%3C/svg%3E") center/cover;
+  }
+
+  .hero-visual-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 200px;
+    font-weight: 300;
+    color: rgba(201,169,110,0.1);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .hero-tag {
+    position: absolute; bottom: 48px; left: 40px;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(8px);
+    padding: 20px 28px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .hero-tag p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.4;
+  }
+
+  .hero-tag span {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* ---- MARQUEE ---- */
+  .marquee-strip {
+    background: var(--charcoal);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+
+  .marquee-inner {
+    display: flex; gap: 60px;
+    animation: marquee 25s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee-item {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    flex-shrink: 0;
+    display: flex; align-items: center; gap: 24px;
+  }
+
+  .marquee-item::after { content: '◆'; font-size: 6px; color: var(--nude); }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---- SECTIONS ---- */
+  section { padding: 100px 0; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-subtitle {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--warm-gray);
+    font-weight: 300;
+    max-width: 540px;
+  }
+
+  /* ---- ABOUT ---- */
+  #about { background: var(--white); }
+
+  .about-grid {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-box {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--nude) 0%, var(--blush) 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+
+  .about-img-box::before {
+    content: 'La Mariée';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-style: italic;
+    color: rgba(201,169,110,0.25);
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .about-accent-box {
+    position: absolute; bottom: -30px; right: -30px;
+    width: 180px; height: 180px;
+    background: var(--charcoal);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 4px;
+  }
+
+  .about-accent-box .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .about-accent-box .txt {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pearl);
+    text-align: center;
+  }
+
+  .about-content { padding: 20px 0; }
+
+  .about-values {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-top: 40px;
+  }
+
+  .value-card {
+    padding: 24px;
+    border: 1px solid var(--nude);
+    transition: border-color 0.3s;
+  }
+
+  .value-card:hover { border-color: var(--gold); }
+
+  .value-icon {
+    font-size: 20px; margin-bottom: 10px; display: block;
+  }
+
+  .value-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .value-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--warm-gray);
+    font-weight: 300;
+  }
+
+  /* ---- COLLECTION ---- */
+  #collection { background: var(--cream); }
+
+  .collection-wrapper {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+  }
+
+  .collection-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 60px; flex-wrap: wrap; gap: 20px;
+  }
+
+  .collection-tabs {
+    display: flex; gap: 0; border: 1px solid var(--nude);
+  }
+
+  .tab-btn {
+    padding: 12px 28px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--warm-gray);
+    font-family: 'Jost', sans-serif;
+    transition: all 0.3s;
+    border-right: 1px solid var(--nude);
+  }
+
+  .tab-btn:last-child { border-right: none; }
+  .tab-btn.active { background: var(--charcoal); color: var(--white); }
+  .tab-btn:hover:not(.active) { background: var(--nude); color: var(--charcoal); }
+
+  .collection-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  }
+
+  .dress-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .dress-card:hover { transform: translateY(-6px); }
+
+  .dress-card-img {
+    width: 100%; aspect-ratio: 3/4;
+    position: relative; overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .dress-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+
+  .dress-placeholder.mariee { background: linear-gradient(160deg, #F0E6DC 0%, #DDD0C4 100%); }
+  .dress-placeholder.fiancaille { background: linear-gradient(160deg, #F5EBE8 0%, #E8D0C8 100%); }
+  .dress-placeholder.ceremonie { background: linear-gradient(160deg, #EEE8F0 0%, #D8CCE0 100%); }
+
+  .dress-placeholder-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: rgba(201,169,110,0.2);
+    font-style: italic;
+    user-select: none;
+  }
+
+  .dress-badge {
+    position: absolute; top: 16px; left: 16px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    font-weight: 500;
+  }
+
+  .dress-reserve {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: var(--charcoal);
+    color: var(--white);
+    text-align: center;
+    padding: 14px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+    cursor: pointer;
+  }
+
+  .dress-card:hover .dress-reserve { transform: translateY(0); }
+
+  .dress-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+
+  .dress-desc {
+    font-size: 12px;
+    color: var(--warm-gray);
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .dress-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  /* ---- SERVICES ---- */
+  #services { background: var(--charcoal); }
+
+  .services-wrapper {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+  }
+
+  .services-wrapper .section-label { color: var(--gold-light); }
+  .services-wrapper .section-label::before { background: var(--gold-light); }
+  .services-wrapper .section-title { color: var(--white); }
+
+  .services-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+    margin-top: 60px; background: rgba(255,255,255,0.05);
+  }
+
+  .service-card {
+    padding: 48px 32px;
+    border: 1px solid rgba(201,169,110,0.15);
+    transition: background 0.3s;
+    text-align: center;
+  }
+
+  .service-card:hover { background: rgba(201,169,110,0.08); }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: rgba(201,169,110,0.25);
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--pearl);
+    font-weight: 300;
+  }
+
+  /* ---- TESTIMONIALS ---- */
+  #testimonials { background: var(--rose-pale); }
+
+  .testimonials-wrapper {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+  }
+
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 60px;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    padding: 40px 32px;
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: var(--gold);
+    opacity: 0.3;
+    position: absolute;
+    top: 16px; left: 28px;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+    padding-top: 20px;
+  }
+
+  .testimonial-author {
+    display: flex; align-items: center; gap: 14px;
+  }
+
+  .author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--nude);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .author-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+
+  .author-date {
+    font-size: 11px;
+    color: var(--warm-gray);
+    font-weight: 300;
+  }
+
+  .stars { color: var(--gold); font-size: 12px; letter-spacing: 2px; margin-bottom: 12px; }
+
+  /* ---- APPOINTMENT ---- */
+  #appointment { background: var(--white); }
+
+  .appointment-wrapper {
+    max-width: 1000px; margin: 0 auto; padding: 0 60px;
+    text-align: center;
+  }
+
+  .appointment-wrapper .section-label { justify-content: center; }
+  .appointment-wrapper .section-label::before { display: none; }
+  .appointment-wrapper .section-title { text-align: center; }
+  .appointment-wrapper .section-subtitle { text-align: center; margin: 0 auto 48px; }
+
+  .appointment-form {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    text-align: left;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1/-1; }
+
+  .form-group label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid var(--nude);
+    padding: 14px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: var(--charcoal);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.3s;
+    font-weight: 300;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    grid-column: 1/-1;
+    display: flex; justify-content: center; gap: 16px; margin-top: 12px;
+  }
+
+  /* ---- CONTACT ---- */
+  #contact { background: var(--cream); }
+
+  .contact-wrapper {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+  .contact-item {
+    display: flex; gap: 20px; align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px;
+    background: var(--nude);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .contact-item-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .contact-item-value {
+    font-size: 14px;
+    color: var(--charcoal);
+    font-weight: 300;
+    line-height: 1.6;
+    text-decoration: none;
+  }
+
+  a.contact-item-value:hover { color: var(--gold); }
+
+  .map-placeholder {
+    width: 100%; height: 350px;
+    background: var(--nude);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .map-placeholder iframe {
+    width: 100%; height: 100%; border: 0;
+  }
+
+  .whatsapp-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: #25D366;
+    color: var(--white);
+    padding: 16px 32px;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: 12px;
+  }
+
+  .whatsapp-btn:hover { background: #1da851; }
+
+  /* ---- INSTAGRAM ---- */
+  #instagram { background: var(--white); padding: 80px 0; }
+
+  .instagram-wrapper {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+    text-align: center;
+  }
+
+  .instagram-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px;
+    margin-top: 40px;
+  }
+
+  .insta-item {
+    aspect-ratio: 1;
+    background: var(--nude);
+    position: relative; overflow: hidden; cursor: pointer;
+  }
+
+  .insta-item:nth-child(1) { background: linear-gradient(135deg, #F5EAE4, #E8CFC5); }
+  .insta-item:nth-child(2) { background: linear-gradient(135deg, #EDE8F5, #D5CBE8); }
+  .insta-item:nth-child(3) { background: linear-gradient(135deg, #F5F0E4, #E8DEC5); }
+  .insta-item:nth-child(4) { background: linear-gradient(135deg, #EAF5F0, #C5E8DA); }
+  .insta-item:nth-child(5) { background: linear-gradient(135deg, #F5EAF0, #E8C5D5); }
+  .insta-item:nth-child(6) { background: linear-gradient(135deg, #F0EAF5, #D5C5E8); }
+
+  .insta-overlay {
+    position: absolute; inset: 0;
+    background: rgba(58,53,48,0);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s;
+  }
+
+  .insta-item:hover .insta-overlay { background: rgba(58,53,48,0.5); }
+
+  .insta-icon {
+    font-size: 24px; color: white; opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .insta-item:hover .insta-icon { opacity: 1; }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--charcoal);
+    padding: 80px 0 40px;
+    color: var(--pearl);
+  }
+
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto; padding: 0 60px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .footer-brand .logo span { color: var(--gold); }
+
+  .footer-brand p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--pearl);
+    font-weight: 300;
+    max-width: 280px;
+    margin-bottom: 28px;
+  }
+
+  .social-links { display: flex; gap: 12px; }
+
+  .social-link {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(201,169,110,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--pearl);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+  .footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-links a {
+    font-size: 13px;
+    color: var(--pearl);
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto; padding: 24px 60px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+    color: var(--warm-gray);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-gold { color: var(--gold); }
+
+  /* ---- ANIMATIONS ---- */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+  /* ---- MOBILE NAV ---- */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--cream);
+    z-index: 999;
+    flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .mobile-menu-close {
+    position: absolute; top: 24px; right: 24px;
+    background: none; border: none; font-size: 28px; cursor: pointer; color: var(--charcoal);
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    nav { padding: 18px 32px; }
+    .nav-links { display: none; }
+    .nav-cta-wrap { display: none; }
+    .hamburger { display: flex; }
+
+    #hero { grid-template-columns: 1fr; }
+    .hero-text { padding: 80px 32px 48px; }
+    .hero-image { height: 50vh; }
+
+    .about-grid { grid-template-columns: 1fr; padding: 0 32px; gap: 48px; }
+    .about-accent-box { display: none; }
+
+    .collection-wrapper { padding: 0 32px; }
+    .collection-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+    .services-wrapper { padding: 0 32px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .testimonials-wrapper { padding: 0 32px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    .contact-wrapper { grid-template-columns: 1fr; padding: 0 32px; gap: 48px; }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; padding: 0 32px; gap: 40px; }
+
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .appointment-wrapper { padding: 0 32px; }
+    .appointment-form { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    .hero-text { padding: 64px 20px 40px; }
+    .hero-social-proof { gap: 28px; flex-wrap: wrap; }
+    .about-grid, .collection-wrapper, .services-wrapper,
+    .testimonials-wrapper, .contact-wrapper, .appointment-wrapper { padding: 0 20px; }
+    section { padding: 70px 0; }
+    .collection-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .collection-tabs { flex-wrap: wrap; }
+    .footer-grid { grid-template-columns: 1fr; padding: 0 20px; }
+    .footer-bottom { padding: 24px 20px 0; flex-direction: column; text-align: center; }
+    .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+
+  /* ---- NOTIFICATION ---- */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(100px);
+    background: var(--charcoal); color: var(--white);
+    padding: 16px 32px; font-size: 13px; letter-spacing: 0.05em;
+    transition: transform 0.4s ease; z-index: 9999;
+    border-left: 3px solid var(--gold);
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <a href="#hero" onclick="toggleMenu()">Accueil</a>
+  <a href="#about" onclick="toggleMenu()">À propos</a>
+  <a href="#collection" onclick="toggleMenu()">Collection</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#appointment" onclick="toggleMenu()" style="color:var(--gold)">Rendez-vous</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">La <span>Mariée</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#appointment" class="nav-cta">Rendez-vous</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <div class="hero-badge">Boutique Exclusive · Antananarivo</div>
+    <h1 class="hero-title">
+      Sublimez<br>votre <em>jour</em><br>unique
+    </h1>
+    <p class="hero-subtitle">Des robes de mariée d'exception pour les femmes qui méritent le meilleur. Pièces uniques, friperie haut de gamme, et conseils personnalisés à Antananarivo.</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn-primary">Découvrir la collection</a>
+      <a href="#appointment" class="btn-outline">Prendre rendez-vous</a>
+    </div>
+    <div class="hero-social-proof">
+      <div class="proof-item">
+        <span class="proof-number">69K</span>
+        <span class="proof-label">Followers</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">500+</span>
+        <span class="proof-label">Mariées heureuses</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">100%</span>
+        <span class="proof-label">Satisfaction garantie</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-visual">
+      <div class="hero-visual-text">♡</div>
+    </div>
+    <div class="hero-tag">
+      <p>"La robe de vos rêves vous attend"</p>
+      <span>La Mariée · Madagascar</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Robes de Mariée</span>
+    <span class="marquee-item">Fiançailles</span>
+    <span class="marquee-item">Cérémonies</span>
+    <span class="marquee-item">Pièces Uniques</span>
+    <span class="marquee-item">Essayage Personnalisé</span>
+    <span class="marquee-item">Antananarivo</span>
+    <span class="marquee-item">Robes de Mariée</span>
+    <span class="marquee-item">Fiançailles</span>
+    <span class="marquee-item">Cérémonies</span>
+    <span class="marquee-item">Pièces Uniques</span>
+    <span class="marquee-item">Essayage Personnalisé</span>
+    <span class="marquee-item">Antananarivo</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual fade-up">
+      <div class="about-img-box"></div>
+      <div class="about-accent-box">
+        <span class="num">69K</span>
+        <span class="txt">Followers<br>Facebook</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-label fade-up">Notre histoire</div>
+      <h2 class="section-title fade-up">L'amour du <em>détail</em>,<br>à votre service</h2>
+      <p class="section-subtitle fade-up" style="margin-bottom: 20px;">
+        Née d'une passion pour la beauté et l'élégance, <strong>La Mariée</strong> est la boutique de référence à Antananarivo pour toutes les femmes qui souhaitent briller lors de leurs plus beaux moments.
+      </p>
+      <p class="section-subtitle fade-up">
+        Située à Andrefan'Ambojanahary, nous proposons une sélection soignée de robes de mariée, de fiançailles et de cérémonie — entre friperie haut de gamme et pièces uniques introuvables ailleurs. Notre mission : rendre l'exceptionnel accessible à toutes.
+      </p>
+      <div class="about-values">
+        <div class="value-card fade-up">
+          <span class="value-icon">✦</span>
+          <h4>Qualité Premium</h4>
+          <p>Chaque robe est sélectionnée avec soin pour garantir élégance et durabilité.</p>
+        </div>
+        <div class="value-card fade-up">
+          <span class="value-icon">♡</span>
+          <h4>Conseil Personnalisé</h4>
+          <p>Un accompagnement dédié pour trouver la robe qui vous correspond parfaitement.</p>
+        </div>
+        <div class="value-card fade-up">
+          <span class="value-icon">◈</span>
+          <h4>Prix Accessibles</h4>
+          <p>Des robes de rêve sans compromis sur votre budget.</p>
+        </div>
+        <div class="value-card fade-up">
+          <span class="value-icon">❋</span>
+          <h4>Communauté de 69K</h4>
+          <p>Une confiance prouvée par des milliers de clientes satisfaites.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section id="collection">
+  <div class="collection-wrapper">
+    <div class="collection-header">
+      <div>
+        <div class="section-label">Notre collection</div>
+        <h2 class="section-title">La <em>robe</em> de vos rêves</h2>
+      </div>
+      <div class="collection-tabs">
+        <button class="tab-btn active" onclick="filterDresses('tout', this)">Tout</button>
+        <button class="tab-btn" onclick="filterDresses('mariee', this)">Mariée</button>
+        <button class="tab-btn" onclick="filterDresses('fiancaille', this)">Fiançailles</button>
+        <button class="tab-btn" onclick="filterDresses('ceremonie', this)">Cérémonie</button>
+      </div>
+    </div>
+
+    <div class="collection-grid" id="dressGrid">
+      <!-- Mariée -->
+      <div class="dress-card fade-up" data-cat="mariee">
+        <div class="dress-card-img">
+          <div class="dress-placeholder mariee"><span class="dress-placeholder-icon">♡</span></div>
+          <span class="dress-badge">Mariée</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Ivoire Classique</div>
+        <div class="dress-desc">Robe longue en satin ivoire, encolure en V, traîne élégante. Une pièce intemporelle.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+
+      <div class="dress-card fade-up" data-cat="mariee">
+        <div class="dress-card-img">
+          <div class="dress-placeholder mariee" style="background: linear-gradient(160deg, #EDE8F5 0%, #D5C8E8 100%);"><span class="dress-placeholder-icon">✦</span></div>
+          <span class="dress-badge">Mariée</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Dentelle Royale</div>
+        <div class="dress-desc">Robe princesse en dentelle fine, ornée de perles délicates. Sublime et raffinée.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+
+      <div class="dress-card fade-up" data-cat="mariee">
+        <div class="dress-card-img">
+          <div class="dress-placeholder mariee" style="background: linear-gradient(160deg, #F5F0E4 0%, #E4D8C0 100%);"><span class="dress-placeholder-icon">❋</span></div>
+          <span class="dress-badge">Mariée · Unique</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Bohème Chic</div>
+        <div class="dress-desc">Fluidité et légèreté pour la mariée moderne. Tissu mousseline, ornements floraux.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+
+      <!-- Fiançailles -->
+      <div class="dress-card fade-up" data-cat="fiancaille">
+        <div class="dress-card-img">
+          <div class="dress-placeholder fiancaille"><span class="dress-placeholder-icon">◈</span></div>
+          <span class="dress-badge">Fiançailles</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Rose Poudré</div>
+        <div class="dress-desc">Robe midi en soie rose poudré, coupe ajustée, parfaite pour les soirées de fiançailles.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+
+      <div class="dress-card fade-up" data-cat="fiancaille">
+        <div class="dress-card-img">
+          <div class="dress-placeholder fiancaille" style="background: linear-gradient(160deg, #F5EAE4 0%, #DEC4B0 100%);"><span class="dress-placeholder-icon">♡</span></div>
+          <span class="dress-badge">Fiançailles</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Nude Élégante</div>
+        <div class="dress-desc">Silhouette épurée en tissu nude, détails dorés discrets. Classe absolue.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+
+      <!-- Cérémonie -->
+      <div class="dress-card fade-up" data-cat="ceremonie">
+        <div class="dress-card-img">
+          <div class="dress-placeholder ceremonie"><span class="dress-placeholder-icon">✦</span></div>
+          <span class="dress-badge">Cérémonie</span>
+          <div class="dress-reserve" onclick="showToast()">Réserver en magasin</div>
+        </div>
+        <div class="dress-name">Robe Grise Perle</div>
+        <div class="dress-desc">Robe longue couleur gris perle, élégante et sobre, parfaite pour toutes cérémonies.</div>
+        <div class="dress-price">Sur demande</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px;">
+      <a href="https://www.facebook.com/profile.php?id=100077770929842" target="_blank" class="btn-outline">Voir toute la collection sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-wrapper">
+    <div class="section-label">Ce que nous offrons</div>
+    <h2 class="section-title">Un service <em>d'exception</em>,<br>à chaque étape</h2>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <span class="service-num">01</span>
+        <span class="service-icon">🏪</span>
+        <h3>Retrait en Magasin</h3>
+        <p>Venez découvrir et récupérer votre robe directement dans notre boutique à Andrefan'Ambojanahary, Antananarivo.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-num">02</span>
+        <span class="service-icon">👗</span>
+        <h3>Essayage Personnalisé</h3>
+        <p>Prenez le temps d'essayer et de trouver la robe parfaite dans un cadre intimiste et accueillant.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-num">03</span>
+        <span class="service-icon">💎</span>
+        <h3>Conseils Sur Mesure</h3>
+        <p>Notre équipe vous guide avec expertise pour sublimer votre silhouette et refléter votre personnalité.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-num">04</span>
+        <span class="service-icon">📞</span>
+        <h3>Contact Direct</h3>
+        <p>Disponibles par téléphone et WhatsApp pour répondre à toutes vos questions et organiser vos essayages.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-wrapper">
+    <div class="section-label">Elles nous font confiance</div>
+    <h2 class="section-title">Des <em>mariées</em> comblées</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">J'ai trouvé ma robe de rêve à La Mariée ! L'équipe est tellement attentionnée, elles ont su comprendre exactement ce que je voulais. Ma robe était parfaite le jour J.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Aminata R.</div>
+            <div class="author-date">Mariée en 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Une boutique magnifique, des robes sublimes et des prix très accessibles. Je recommande à toutes mes amies qui se marient. Merci La Mariée pour ce jour inoubliable !</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div>
+            <div class="author-name">Fetra H.</div>
+            <div class="author-date">Mariée en 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Service impeccable ! On se sent vraiment spéciale lors de l'essayage. La robe que j'ai choisie était unique et j'ai reçu tellement de compliments lors de mes fiançailles.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <div class="author-name">Santatra M.</div>
+            <div class="author-date">Fiançailles 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section id="appointment">
+  <div class="appointment-wrapper">
+    <div class="section-label">Réserver</div>
+    <h2 class="section-title">Prenez <em>rendez-vous</em></h2>
+    <p class="section-subtitle">Venez vivre l'expérience La Mariée. Planifiez votre essayage et laissez-nous vous aider à trouver la robe parfaite pour votre grand jour.</p>
+    <form class="appointment-form" onsubmit="handleForm(event)">
+      <div class="form-group">
+        <label>Prénom & Nom</label>
+        <input type="text" placeholder="Votre nom complet" required>
+      </div>
+      <div class="form-group">
+        <label>Numéro de téléphone</label>
+        <input type="tel" placeholder="034 XX XXX XX" required>
+      </div>
+      <div class="form-group">
+        <label>Type de robe</label>
+        <select>
+          <option value="">Choisissez une catégorie</option>
+          <option>Robe de mariée</option>
+          <option>Robe de fiançailles</option>
+          <option>Robe de cérémonie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Date souhaitée</label>
+        <input type="date">
+      </div>
+      <div class="form-group full">
+        <label>Message (optionnel)</label>
+        <textarea placeholder="Parlez-nous de vos envies, de votre style, de votre date de mariage..."></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-primary">Envoyer ma demande</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="instagram-wrapper">
+    <div class="section-label" style="justify-content:center">@La Mariée</div>
+    <h2 class="section-title" style="text-align:center"><em>69 000</em> personnes nous suivent</h2>
+    <p class="section-subtitle" style="text-align:center; margin: 0 auto 40px;">Rejoignez notre communauté et découvrez nos nouveautés en avant-première sur Facebook.</p>
+    <div class="instagram-grid">
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+      <div class="insta-item"><div class="insta-overlay"><span class="insta-icon">♡</span></div></div>
+    </div>
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="https://www.facebook.com/profile.php?id=100077770929842" target="_blank" class="btn-primary">Suivre La Mariée sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrapper">
+    <div>
+      <div class="section-label">Nous trouver</div>
+      <h2 class="section-title">Venez nous <em>rencontrer</em></h2>
+      <div class="contact-info" style="margin-top: 40px;">
+        <div class="contact-item fade-up">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Adresse</div>
+            <span class="contact-item-value">Andrefan'Ambojanahary derrière EPP<br>Antananarivo 101, Madagascar</span>
+          </div>
+        </div>
+        <div class="contact-item fade-up">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Téléphone</div>
+            <a href="tel:+261344790535" class="contact-item-value">034 47 905 35</a>
+          </div>
+        </div>
+        <div class="contact-item fade-up">
+          <div class="contact-icon">📘</div>
+          <div>
+            <div class="contact-item-label">Facebook</div>
+            <a href="https://www.facebook.com/profile.php?id=100077770929842" target="_blank" class="contact-item-value">La Mariée – 69 000 abonnés</a>
+          </div>
+        </div>
+        <div class="contact-item fade-up">
+          <div class="contact-icon">⏰</div>
+          <div>
+            <div class="contact-item-label">Horaires</div>
+            <span class="contact-item-value">Lundi – Samedi : 8h00 – 18h00<br>Dimanche : Sur rendez-vous</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px; display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="https://wa.me/261344790535" target="_blank" class="whatsapp-btn">
+            <span>💬</span> WhatsApp
+          </a>
+          <a href="tel:+261344790535" class="btn-outline">📞 Appeler</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="map-placeholder">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.169!2d47.510!3d-18.916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU0JzU3LjYiUyA0N8KwMzAnMzYuMCJF!5e0!3m2!1sfr!2smg!4v1700000000000!5m2!1sfr!2smg"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation La Mariée Antananarivo">
+        </iframe>
+      </div>
+      <div style="margin-top: 20px; padding: 24px; background: var(--nude); border-left: 3px solid var(--gold);">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--charcoal); line-height: 1.6;">"Derrière chaque robe, il y a une femme extraordinaire qui mérite de briller."</p>
+        <p style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 8px; font-weight: 500;">— La Mariée, Antananarivo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo">La <span>Mariée</span></span>
+      <p>Votre boutique de robes de mariée, fiançailles et cérémonie à Antananarivo. Des pièces uniques pour votre plus beau jour.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100077770929842" target="_blank" class="social-link" aria-label="Facebook">f</a>
+        <a href="https://wa.me/261344790535" target="_blank" class="social-link" aria-label="WhatsApp">w</a>
+        <a href="tel:+261344790535" class="social-link" aria-label="Téléphone">☎</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <div class="footer-links">
+        <a href="#about">À propos</a>
+        <a href="#collection">Collection</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Avis clients</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Collection</h4>
+      <div class="footer-links">
+        <a href="#collection">Robes de Mariée</a>
+        <a href="#collection">Robes de Fiançailles</a>
+        <a href="#collection">Robes de Cérémonie</a>
+        <a href="#collection">Pièces Uniques</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-links">
+        <a href="tel:+261344790535">034 47 905 35</a>
+        <a href="https://wa.me/261344790535" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/profile.php?id=100077770929842" target="_blank">Facebook</a>
+        <a href="#appointment">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="footer-gold">La Mariée</span> · Antananarivo, Madagascar · Tous droits réservés</p>
+    <p>Robe de mariée Antananarivo · Robe mariage Madagascar</p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Votre demande a été envoyée ! Nous vous contacterons bientôt.</div>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 80) {
+      nav.style.padding = '14px 60px';
+    } else {
+      nav.style.padding = '20px 60px';
+    }
+  });
+
+  // Collection filter
+  function filterDresses(cat, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.dress-card').forEach(card => {
+      if (cat === 'tout' || card.dataset.cat === cat) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Toast notification
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+
+  // Form submit
+  function handleForm(e) {
+    e.preventDefault();
+    const toast = document.getElementById('toast');
+    toast.textContent = '✓ Rendez-vous demandé ! Nous vous contactons très bientôt.';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+    e.target.reset();
+  }
+
+  // Responsive nav padding
+  function updateNavPadding() {
+    const nav = document.getElementById('navbar');
+    if (window.innerWidth <= 600) {
+      nav.style.padding = window.scrollY > 80 ? '12px 20px' : '16px 20px';
+    } else if (window.innerWidth <= 1024) {
+      nav.style.padding = window.scrollY > 80 ? '14px 32px' : '18px 32px';
+    }
+  }
+  window.addEventListener('scroll', updateNavPadding);
+  window.addEventListener('resize', updateNavPadding);
+</script>
+</body>
+</html>
